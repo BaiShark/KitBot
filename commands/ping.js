@@ -3,7 +3,6 @@ const config = require('../config.json');
 
 module.exports = {
     name: 'ping',
-    description: 'Information about the arguments provided.',
     execute(message) {
         let embed = new Discord.MessageEmbed()
             .setTitle('Пинг...')
@@ -17,7 +16,7 @@ module.exports = {
                 .setTimestamp()
                 .setColor(config.embedColor);
 
-            res.edit(embed);
+            return res.edit(embed);
         });
     }
 };
