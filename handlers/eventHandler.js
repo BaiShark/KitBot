@@ -7,4 +7,7 @@ module.exports = client => {
     client.on('message', (message) => {
         reqEvent('executeCommand')(client, message);
     });
+    client.on('guildMemberAdd', (member) => {
+        reqEvent('welcome')(member);
+    });
 }
