@@ -2,9 +2,9 @@ const Discord = require('discord.js');
 const config = require('../config.json');
 
 module.exports = {
-    name: 'ping',
+    name: 'about',
     execute(message) {
-        if (!message.member.roles.cache.get(config.adminRole)) return
+        if (!message.member.roles.cache.get(config.adminRole)) return;
 
         let embed = new Discord.MessageEmbed()
             .setTitle('Ссылки')
