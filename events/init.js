@@ -1,9 +1,4 @@
 module.exports = (client) => {
-    client.user.setPresence({
-        game: {
-            name: 'в Уголке Китама',
-            type: 0,
-        }
-    });
+    client.user.setActivity('в Уголке Китама');
     console.log(`${client.user.username} запущен!`);
 }
