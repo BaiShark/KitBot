@@ -11,7 +11,7 @@ module.exports = {
             const ping = res.createdTimestamp - message.createdTimestamp;
 
             embed = new Discord.MessageEmbed()
-                .setTitle('Понг!')
+                .setTitle(':ping_pong:Понг!')
                 .setDescription(`Пинг бота ${ping}ms!`)
                 .setTimestamp()
                 .setColor(config.embedColor);

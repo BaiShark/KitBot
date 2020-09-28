@@ -7,13 +7,13 @@ module.exports = {
         let embed;
         if (Math.round(Math.random()) === 0) {
             embed = new Discord.MessageEmbed()
-                .setTitle('Выпал орёл!')
+                .setTitle(':coin:Выпал орёл!')
                 .setImage('https://i.imgur.com/ufge96c.png')
                 .setTimestamp()
                 .setColor(config.embedColor);
         } else {
             embed = new Discord.MessageEmbed()
-                .setTitle('Выпал решка!')
+                .setTitle(':coin:Выпал решка!')
                 .setImage('https://i.imgur.com/aklAD9k.png')
                 .setTimestamp()
                 .setColor(config.embedColor);

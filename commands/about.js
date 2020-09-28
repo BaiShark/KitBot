@@ -7,7 +7,7 @@ module.exports = {
         if (!message.member.roles.cache.get(config.adminRole)) return;
 
         let embed = new Discord.MessageEmbed()
-            .setTitle('Ссылки')
+            .setTitle(':link:Ссылки')
             .addField('Мой Steam', 'https://steamcommunity.com/id/kitaminka')
             .addField('Мой GitHub', 'https://github.com/Kitaminka')
             .addField('Приглашение на сервер','https://discord.gg/G3Dudc3')
