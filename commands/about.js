@@ -4,6 +4,7 @@ const config = require('../config.json');
 module.exports = {
     name: 'about',
     adminCommand: true,
+    usage: '!about',
     description: 'Команда для администраторов. Вывести информацию о сервере и его создателе.',
     execute(message) {
         if (!message.member.roles.cache.get(config.adminRole)) return;

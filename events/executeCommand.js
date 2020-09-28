@@ -9,7 +9,7 @@ module.exports = (client, message) => {
     if (!client.commands.has(command)) return;
 
     try {
-        if (command === 'help') client.commands.get(command).execute(message, client);
+        if (command === 'help') client.commands.get(command).execute(message, args, client);
         else client.commands.get(command).execute(message, args);
     } catch (error) {
         console.error(error);
