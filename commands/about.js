@@ -3,6 +3,8 @@ const config = require('../config.json');
 
 module.exports = {
     name: 'about',
+    showInHelp: false,
+    description: 'Вывести информацию о сервере и о его создателе.',
     execute(message) {
         if (!message.member.roles.cache.get(config.adminRole)) return;
 

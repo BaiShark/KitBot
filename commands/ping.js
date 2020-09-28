@@ -3,6 +3,8 @@ const config = require('../config.json');
 
 module.exports = {
     name: 'ping',
+    showInHelp: true,
+    description: 'Вывести пинг бота.',
     execute(message) {
         let embed = new Discord.MessageEmbed()
             .setTitle('Пинг...')
