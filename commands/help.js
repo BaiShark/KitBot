@@ -8,7 +8,7 @@ module.exports = {
     description: 'Вывести полный список доступных команд.',
     execute(message, args, client) {
         let embed;
-        if (!args) {
+        if (!args[0]) {
             embed = new Discord.MessageEmbed()
                 .setTitle(':robot:Список команды')
                 .setDescription('Полный список команд данного бота:')
