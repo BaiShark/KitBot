@@ -3,8 +3,8 @@ const config = require('../config.json');
 
 module.exports = {
     name: 'coin',
-    showInHelp: true,
-    description: 'Подбрасить монетку.',
+    adminCommand: false,
+    description: 'Подбросить монетку.',
     execute(message) {
         let embed;
         if (Math.round(Math.random()) === 0) {
