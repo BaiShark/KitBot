@@ -4,7 +4,7 @@ const config = require('../config.json');
 module.exports = {
     name: 'coin',
     adminCommand: false,
-    usage: '!coin',
+    usage: '**!coin**',
     description: 'Подбросить монетку.',
     execute(message) {
         let embed;

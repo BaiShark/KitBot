@@ -4,14 +4,14 @@ const config = require('../config.json');
 module.exports = {
     name: 'help',
     adminCommand: false,
-    usage: '!help или !help <имя команды>',
+    usage: '**!help** или **!help <имя команды>**',
     description: 'Вывести полный список доступных команд.',
     execute(message, args, client) {
         let embed;
         if (!args[0]) {
             embed = new Discord.MessageEmbed()
                 .setTitle(':robot:Список команды')
-                .setDescription('Полный список команд данного бота:')
+                .setDescription('Чтобы получить полную информацию по конкретной команде, напишите **!help <имя команды>**. Полный список команд данного бота:')
                 .setTimestamp()
                 .setColor(config.embedColor);
             for (const command of client.commands) {
