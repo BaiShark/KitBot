@@ -6,7 +6,7 @@ module.exports = {
     adminCommand: false,
     usage: '**!avatar**, **!avatar <id_пользователя>** или **!avatar <упоминание_пользователя>**',
     description: 'Вывести аватар пользователя.',
-    execute(message, args) {
+    async execute(message, args) {
         let user, embed;
         if (!args[0]) {
             user = message.author;
@@ -28,7 +28,7 @@ module.exports = {
         else {
             embed = new Discord.MessageEmbed()
                 .setTitle(`:bust_in_silhouette:Аватар пользователя ${user.username}`)
-                .setImage(user.displayAvatarURL({ format:'png', dynamic:true, size:4096 }))
+                .setImage(user.displayAvatarURL({ format:'png', dynamic:true, size:4096, }))
                 .setTimestamp()
                 .setColor(config.embedColor);
         }

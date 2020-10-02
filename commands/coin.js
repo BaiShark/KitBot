@@ -6,18 +6,24 @@ module.exports = {
     adminCommand: false,
     usage: '**!coin**',
     description: 'Подбросить монетку.',
-    execute(message) {
+   async  execute(message) {
         let embed;
         if (Math.round(Math.random()) === 0) {
             embed = new Discord.MessageEmbed()
                 .setTitle(':coin:Выпал орёл!')
-                .setImage('https://i.imgur.com/ufge96c.png')
+                .attachFiles([
+                    new Discord.MessageAttachment('./img/orel.png', 'orel.png')
+                ])
+                .setImage('attachment://orel.png')
                 .setTimestamp()
                 .setColor(config.embedColor);
         } else {
             embed = new Discord.MessageEmbed()
                 .setTitle(':coin:Выпал решка!')
-                .setImage('https://i.imgur.com/aklAD9k.png')
+                .attachFiles([
+                    new Discord.MessageAttachment('./img/reshka.png', 'reshka.png')
+                ])
+                .setImage('attachment://reshka.png')
                 .setTimestamp()
                 .setColor(config.embedColor);
         }

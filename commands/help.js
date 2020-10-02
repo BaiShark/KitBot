@@ -6,7 +6,7 @@ module.exports = {
     adminCommand: false,
     usage: '**!help** или **!help <имя_команды>**',
     description: 'Вывести полный список доступных команд.',
-    execute(message, args, client) {
+    async execute(message, args, client) {
         let embed;
         if (!args[0]) {
             embed = new Discord.MessageEmbed()

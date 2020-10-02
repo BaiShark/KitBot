@@ -6,7 +6,7 @@ module.exports = {
     adminCommand: true,
     usage: '**!about**',
     description: 'Вывести информацию о сервере и его создателе.',
-    execute(message) {
+    async execute(message) {
         if (!message.member.roles.cache.get(config.adminRole)) return;
 
         let embed = new Discord.MessageEmbed()

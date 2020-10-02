@@ -6,7 +6,7 @@ module.exports = {
     adminCommand: false,
     usage: '**!ping**',
     description: 'Вывести пинг бота.',
-    execute(message) {
+    async execute(message) {
         let embed = new Discord.MessageEmbed()
             .setTitle('Пинг...')
             .setColor(config.embedColor);

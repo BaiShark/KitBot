@@ -1,6 +1,6 @@
 const config = require('../config.json');
 
-module.exports = (client, message) => {
+module.exports = async (client, message) => {
     if (!message.content.startsWith(config.prefix) || message.author.bot || message.channel.type === 'dm') return;
 
     const args = message.content.slice(config.prefix.length).trim().split(/ +/);
@@ -9,8 +9,7 @@ module.exports = (client, message) => {
     if (!client.commands.has(command)) return;
 
     try {
-        if (command === 'help') client.commands.get(command).execute(message, args, client);
-        else client.commands.get(command).execute(message, args);
+        await client.commands.get(command).execute(message, args, client);
     } catch (error) {
         console.error(error);
     }
