@@ -11,19 +11,15 @@ module.exports = {
         if (Math.round(Math.random()) === 0) {
             embed = new Discord.MessageEmbed()
                 .setTitle(':coin:Выпал орёл!')
-                .attachFiles([
-                    new Discord.MessageAttachment('./img/orel.png', 'orel.png')
-                ])
-                .setImage('attachment://orel.png')
+                .attachFiles(['./img/orel.png'])
+                .setThumbnail('attachment://orel.png')
                 .setTimestamp()
                 .setColor(config.embedColor);
         } else {
             embed = new Discord.MessageEmbed()
                 .setTitle(':coin:Выпал решка!')
-                .attachFiles([
-                    new Discord.MessageAttachment('./img/reshka.png', 'reshka.png')
-                ])
-                .setImage('attachment://reshka.png')
+                .attachFiles(['./img/reshka.png'])
+                .setThumbnail('attachment://reshka.png')
                 .setTimestamp()
                 .setColor(config.embedColor);
         }
