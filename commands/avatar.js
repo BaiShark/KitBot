@@ -7,18 +7,18 @@ module.exports = {
     usage: '**!avatar**, **!avatar <id_пользователя>** или **!avatar <упоминание_пользователя>**',
     description: 'Вывести аватар пользователя.',
     async execute(message, args) {
-        let user, embed;
+        let selectedUser, embed;
         if (!args[0]) {
-            user = message.author;
+            selectedUser = message.author;
         }
         else if (message.mentions.users.first()) {
-            user = message.mentions.users.first();
+            selectedUser = message.mentions.users.first();
         }
         else if (message.guild.members.cache.get(args[0])) {
-            user = message.guild.members.cache.get(args[0]).user;
+            selectedUser = message.guild.members.cache.get(args[0]).user;
         }
 
-        if (!user) {
+        if (!selectedUser) {
             embed = new Discord.MessageEmbed()
                 .setTitle(':x:Ошибка')
                 .setDescription('Не удалось найти пользователя.')
@@ -27,8 +27,8 @@ module.exports = {
         }
         else {
             embed = new Discord.MessageEmbed()
-                .setTitle(`:bust_in_silhouette:Аватар пользователя ${user.username}`)
-                .setImage(user.displayAvatarURL({ format:'png', dynamic:true, size:4096, }))
+                .setTitle(`:bust_in_silhouette:Аватар пользователя ${selectedUser.username}`)
+                .setImage(selectedUser.displayAvatarURL({ format:'png', dynamic:true, size:4096, }))
                 .setTimestamp()
                 .setColor(config.embedColor);
         }

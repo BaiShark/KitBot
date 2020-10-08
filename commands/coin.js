@@ -17,7 +17,7 @@ module.exports = {
                 .setColor(config.embedColor);
         } else {
             embed = new Discord.MessageEmbed()
-                .setTitle(':coin:Выпал решка!')
+                .setTitle(':coin:Выпала решка!')
                 .attachFiles(['./img/reshka.png'])
                 .setThumbnail('attachment://reshka.png')
                 .setTimestamp()
