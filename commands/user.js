@@ -28,10 +28,10 @@ module.exports = {
         else {
             embed = new Discord.MessageEmbed()
                 .setTitle(`:page_facing_up:Информация о пользователе ${selectedMember.user.username}`)
-                .setThumbnail(selectedMember.displayAvatarURL({ format:'png', dynamic:true, size:4096, }))
+                .setThumbnail(selectedMember.user.displayAvatarURL({ format:'png', dynamic:true, size:4096, }))
                 .setDescription('Общая информация о пользователе.')
                 .addField('Полный никнейм', `${selectedMember.user.username}#${selectedMember.user.discriminator}`)
-                .addField('ID пользователя', selectedMember.id)
+                .addField('ID пользователя', selectedMember.user.id)
                 .addField('Присоеденился', selectedMember.joinedAt)
                 .addField('Аккаунт создан', selectedMember.user.createdAt)
                 .addField('Высшая роль пользователя', selectedMember.roles.highest)
