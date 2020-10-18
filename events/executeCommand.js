@@ -11,7 +11,7 @@ module.exports = async (client, message) => {
     try {
         message.channel.startTyping();
         await client.commands.get(command).execute(message, args, client);
-        await message.channel.stopTyping();
+        message.channel.stopTyping();
     } catch (error) {
         console.error(error);
     }
