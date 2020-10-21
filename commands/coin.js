@@ -11,15 +11,13 @@ module.exports = {
         if (Math.round(Math.random()) === 0) {
             embed = new Discord.MessageEmbed()
                 .setTitle(':coin:Выпал орёл!')
-                .attachFiles(['./img/orel.png'])
-                .setThumbnail('attachment://orel.png')
+                .setThumbnail('https://i.imgur.com/35Vdrxy.png')
                 .setTimestamp()
                 .setColor(config.embedColor);
         } else {
             embed = new Discord.MessageEmbed()
                 .setTitle(':coin:Выпала решка!')
-                .attachFiles(['./img/reshka.png'])
-                .setThumbnail('attachment://reshka.png')
+                .setThumbnail('https://i.imgur.com/PYPK3PD.png')
                 .setTimestamp()
                 .setColor(config.embedColor);
         }

@@ -9,9 +9,7 @@ module.exports = async (client, message) => {
     if (!client.commands.has(command)) return;
 
     try {
-        message.channel.startTyping();
         await client.commands.get(command).execute(message, args, client);
-        message.channel.stopTyping();
     } catch (error) {
         console.error(error);
     }
