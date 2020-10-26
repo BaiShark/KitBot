@@ -5,11 +5,12 @@ const config = require('../config.json');
 module.exports = async (member) => {
     const canvas = Canvas.createCanvas(700, 250);
     const ctx = canvas.getContext('2d');
+    Canvas.registerFont('./fonts/impact.ttf', { family: 'Impact' });
 
     const background = await Canvas.loadImage('./img/background.jpg');
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-    ctx.font = '50px impact';
+    ctx.font = '50px "Impact"';
     ctx.fillStyle =  '#fff';
     ctx.fillText('Добро пожаловать,', canvas.width / 2.8, canvas.height / 2.3);
     ctx.fillText(`${member.user.username}!`, canvas.width / 2.8, canvas.height / 1.5);
