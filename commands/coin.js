@@ -6,7 +6,7 @@ module.exports = {
     adminCommand: false,
     usage: '**!coin**',
     description: 'Подбросить монетку.',
-   async  execute(message) {
+   async execute(message) {
         let embed;
         if (Math.round(Math.random()) === 0) {
             embed = new Discord.MessageEmbed()

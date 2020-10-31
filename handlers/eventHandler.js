@@ -1,13 +1,11 @@
-const reqEvent = (event) => require(`../events/${event}`);
-
-module.exports = client => {
+module.exports = async (client) => {
     client.on('ready', async () => {
-        reqEvent('init')(client);
+        await require('../events/init')(client);
     });
     client.on('message', async (message) => {
-        reqEvent('executeCommand')(client, message);
+        await require('../events/executeCommand')(client, message);
     });
     client.on('guildMemberAdd', async (member) => {
-        reqEvent('welcome')(member);
+        await require('../events/welcome')(member);
     });
 }
