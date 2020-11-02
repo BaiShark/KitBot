@@ -40,7 +40,7 @@ module.exports = async (member) => {
     await welcomeMessage.react('✅');
 
     const filter = (reaction, user) => {
-        return ['✅'].includes(reaction.emoji.name) && user.id === member.user.id;
+        return '✅'.includes(reaction.emoji.name) && user.id === member.user.id;
     };
 
     welcomeMessage.awaitReactions(filter, { max: 1, time: 300000, errors: ['time'] })
