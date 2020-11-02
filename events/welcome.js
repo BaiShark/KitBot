@@ -49,7 +49,7 @@ module.exports = async (member) => {
                 .setTitle(':wave:Добро пожаловать!')
                 .setDescription(`Добро пожаловать на сервер, ${member}. Надеюсь, тебе тут понравится.`)
                 .attachFiles([new Discord.MessageAttachment(canvas.toBuffer(), 'welcome_image.png')])
-                .setFooter('Верификация успешно пройдена', 'https://i.imgur.com/Cws6eaf.png')
+                .setFooter('Верификация успешно пройдена', 'https://i.imgur.com/DyWlZOU.png')
                 .setImage('attachment://welcome_image.png')
                 .setTimestamp()
                 .setColor(config.embedColor);
