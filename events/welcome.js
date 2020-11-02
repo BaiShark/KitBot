@@ -31,7 +31,7 @@ module.exports = async (member) => {
         .setTitle(':wave:Добро пожаловать!')
         .setDescription(`Добро пожаловать на сервер, ${member}. Надеюсь, тебе тут понравится.`)
         .attachFiles([new Discord.MessageAttachment(canvas.toBuffer(), 'welcome_image.png')])
-        .setFooter('Чтобы пройти верификацию, нажмите реакцию ниже', 'https://i.imgur.com/Cws6eaf.png')
+        .setFooter('Чтобы пройти верификацию, нажмите реакцию ниже', 'https://i.imgur.com/DyWlZOU.png')
         .setImage('attachment://welcome_image.png')
         .setTimestamp()
         .setColor(config.embedColor);
@@ -60,6 +60,6 @@ module.exports = async (member) => {
         })
         .catch( () => {
             welcomeMessage.delete();
-            member.kick('Верификация не была пройдена в течении 5 минут');
+            if (member) member.kick('Верификация не была пройдена в течении 5 минут');
         });
 }
