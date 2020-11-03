@@ -1,4 +1,7 @@
 # KitBot
+[![Issues](https://img.shields.io/github/issues/Kitaminka/KitBot)](issues)
+[![Stars](https://img.shields.io/github/stars/Kitaminka/KitBot)](stargazers)
+
 Discord бот для моего сервера.
 ___
 ### Установка и запуск
