@@ -10,7 +10,7 @@ module.exports = async (message, result) => {
     for (let i=0; i<2; ++i) id += Math.floor(Math.random()*9);
 
     const pattern = RegExp("<img.+?src=[\"'](.+?)[\"'].*?>");
-    await fetch(`https://prnt.sc/${id}`).then(res => res.text()).then(async (body) => {
+    const url = await fetch(`https://prnt.sc/${id}`).then(res => res.text()).then(async (body) => {
         let url = pattern.exec(body)[1];
         if (url.startsWith('//')) url = `https:${url}`;
 
@@ -28,6 +28,7 @@ module.exports = async (message, result) => {
         else {
             result = await result.edit(embed);
         }
+        return url;
     });
 
     const filter = (reaction, user) => {
@@ -39,6 +40,13 @@ module.exports = async (message, result) => {
             require('./generatePicture.js')(message, result);
         })
         .catch( () => {
+            const embed = new Discord.MessageEmbed()
+                .setTitle(':frame_photo:Случайное изображение')
+                .setImage(url)
+                .setColor(config.embedColor)
+                .setTimestamp();
+
+            result.edit(embed);
             result.reactions.removeAll();
         });
 };
