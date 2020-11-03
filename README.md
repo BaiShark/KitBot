@@ -1,6 +1,6 @@
 # KitBot
-[![Issues](https://img.shields.io/github/issues/Kitaminka/KitBot)](issues)
-[![Stars](https://img.shields.io/github/stars/Kitaminka/KitBot)](stargazers)
+[![Issues](https://img.shields.io/github/issues/Kitaminka/KitBot)](https://github.com/Kitaminka/KitBot/issues)
+[![Stars](https://img.shields.io/github/stars/Kitaminka/KitBot)](https://github.com/Kitaminka/KitBot/stargazers)
 
 Discord бот для моего сервера.
 ___
