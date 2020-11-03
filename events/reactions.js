@@ -5,12 +5,12 @@ module.exports = async (message) => {
     if (config.reactionMessages.indexOf(content) === -1) return;
 
     for (const symbol of content) {
-        if (!message.deleted) {
-            const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === `${symbol}_letter`);
+        const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === `${symbol}_letter`);
+        try {
             await message.react(reactionEmoji);
         }
-        else {
-            return;
+        catch {
+            console.log('reactions.js event: Message removed!');
         }
     }
 }
