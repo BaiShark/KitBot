@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const unirest = require('unirest');
+const error = require('../modules/error');
 const config = require('../config.json');
 
 module.exports = {
@@ -9,15 +10,7 @@ module.exports = {
     description: 'Вывести информацию об ip адресе.',
     async execute(message, args) {
         let embed;
-        if (!args[0]) {
-            embed = new Discord.MessageEmbed()
-                .setTitle(':x:Ошибка')
-                .setDescription('Вы не указали ip адрес.')
-                .setTimestamp()
-                .setColor(config.embedColor);
-
-            return message.channel.send(embed);
-        }
+        if (!args[0]) return message.channel.send(error.embed('Вы не указали ip адрес.'));
         else {
             const req = unirest('GET', `http://ipwhois.app/json/${args[0]}`);
 
@@ -38,11 +31,7 @@ module.exports = {
                         .setColor(config.embedColor);
                 }
                 else {
-                    embed = new Discord.MessageEmbed()
-                        .setTitle(':x:Ошибка')
-                        .setDescription('Произошла ошибка. Возможно, вы ввели неправильный ip адрес.')
-                        .setTimestamp()
-                        .setColor(config.embedColor);
+                    embed = error.embed('Произошла ошибка. Возможно, вы ввели неправильный ip адрес.');
                 }
                 return message.channel.send(embed);
             });

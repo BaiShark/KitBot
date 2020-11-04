@@ -10,7 +10,7 @@ module.exports = async (message) => {
             await message.react(reactionEmoji);
         }
         catch {
-            console.log('reactions.js event: Message removed!');
+            console.log('reactions.js: Message removed!');
         }
     }
 }

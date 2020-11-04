@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const error = require('../modules/error');
 const config = require('../config.json');
 
 module.exports = {
@@ -30,11 +31,7 @@ module.exports = {
             }
         } else {
             if (!client.commands.has(args[0])) {
-                embed = new Discord.MessageEmbed()
-                    .setTitle(':x:Ошибка')
-                    .setDescription('Введенная вами команда не существует.')
-                    .setTimestamp()
-                    .setColor(config.embedColor);
+                embed = error.embed('Введенная вами команда не существует.');
             } else {
                 const command = client.commands.get(args[0]);
                 let commandStatus;

@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const error = require('../modules/error');
 const config = require('../config.json');
 
 module.exports = {
@@ -19,11 +20,7 @@ module.exports = {
         }
 
         if (!selectedUser) {
-            embed = new Discord.MessageEmbed()
-                .setTitle(':x:Ошибка')
-                .setDescription('Не удалось найти пользователя.')
-                .setTimestamp()
-                .setColor(config.embedColor);
+            embed = error.embed('Не удалось найти пользователя.');
         }
         else {
             embed = new Discord.MessageEmbed()
