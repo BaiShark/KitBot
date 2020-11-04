@@ -1,5 +1,5 @@
 module.exports = async (client) => {
-    client.on('ready', async () => {
+    client.once('ready', async () => {
         await require('../events/init')(client);
     });
     client.on('message', async (message) => {
