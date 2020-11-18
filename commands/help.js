@@ -20,12 +20,13 @@ module.exports = {
                     embed['fields'].push({
                         name: config.prefix + command[1].name,
                         value: command[1].description,
-                        inline: true,
+                        inline: false,
                     });
                 } else if (!command[1].adminCommand) {
                     embed['fields'].push({
                         name: config.prefix + command[1].name,
                         value: command[1].description,
+                        inline: false,
                     });
                 }
             }

@@ -28,7 +28,7 @@ client.login(process.env.TOKEN);
 ```
 - Замените текст **process.env.TOKEN** на токен вашего бота в кавычках. Должно получится примерно так:
 ```js
-client.login("Njc2MTY0NDQwNTg4MDI1ODY2.XkFyMg.cMKBXh5AJ-u0SQt501OoAdgF34f");
+client.login('Njc2MTY0NDQwNTg4MDI1ODY2.XkFyMg.cMKBXh5AJ-u0SQt501OoAdgF34f');
 ```
 - Откройте файл **config.json**, используя любой текстовый редактор.
 -  В этом файле записаны общие настройки бота в следующем формате:
@@ -39,7 +39,7 @@ client.login("Njc2MTY0NDQwNTg4MDI1ODY2.XkFyMg.cMKBXh5AJ-u0SQt501OoAdgF34f");
 |    embedColor    |        "ff6940"       |                           Цвет сообщений бота.                          |
 |  welcomeChannel  |  "759521716241825873" |     ID канала, в котором бот будет приветствовать новых участников.     |
 |     adminRole    |  "759683325065166878" |         ID роли, которая является ролью администраторов сервера.        |
-| verificationRole |  "772709949662035969" |              ID роли, которая является ролью для верефикаци.            |
+| verificationRole |  "772709949662035969" |              ID роли, которая является ролью для верификации.            |
 | reactionMessages | ["xd", "lmao", "ban"] | Массив, который содержит слова, под которыми бот будет ставить реакции. |
 ___
 ### Discord сервер
