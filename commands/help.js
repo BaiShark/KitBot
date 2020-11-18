@@ -11,7 +11,7 @@ module.exports = {
         let embed;
         if (!args[0]) {
             embed = new Discord.MessageEmbed()
-                .setTitle(':robot:Список команды')
+                .setTitle(':robot:Список команд')
                 .setDescription('Чтобы получить полную информацию по конкретной команде, напишите **!help <имя команды>**. Полный список команд данного бота:')
                 .setTimestamp()
                 .setColor(config.embedColor);
