@@ -23,6 +23,8 @@ module.exports = {
             .addField('Мой Steam', 'https://steamcommunity.com/id/kitaminka')
             .addField('Мой GitHub', 'https://github.com/Kitaminka')
             .addField('Приглашение на сервер','https://discord.gg/G3Dudc3')
+            .addField('Мой Telegram','https://t.me/kitaminchik')
+            .addField('Мой Telegram канал','https://t.me/kitamzone')
             .setColor(config.embedColor);
 
         return message.channel.send(rulesEmbed).then( () => {message.channel.send(linkEmbed)});
