@@ -24,7 +24,7 @@ module.exports = {
             .addField('Мой GitHub', 'https://github.com/Kitaminka')
             .addField('Приглашение на сервер','https://discord.gg/G3Dudc3')
             .addField('Мой Telegram','https://t.me/kitaminchik')
-            .addField('Мой Telegram канал','https://t.me/kitamzone')
+            .addField('Мой Telegram канал','https://t.me/kithacks')
             .setColor(config.embedColor);
 
         return message.channel.send(rulesEmbed).then( () => {message.channel.send(linkEmbed)});
