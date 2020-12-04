@@ -4,7 +4,7 @@ const config = require('../config.json');
 module.exports = {
     name: 'ping',
     adminCommand: false,
-    usage: '**!ping**',
+    usage: `**${config.prefix}ping**`,
     description: 'Вывести пинг бота.',
     async execute(message) {
         let embed = new Discord.MessageEmbed()

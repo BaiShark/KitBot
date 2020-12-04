@@ -4,7 +4,7 @@ const config = require('../config.json');
 module.exports = {
     name: 'say',
     adminCommand: true,
-    usage: '**!say <какой-то текст>**',
+    usage: `**${config.prefix}say <какой-то текст>**`,
     description: 'Вывести сообщение от имени бота.',
     async execute(message, args) {
         if (!message.member.roles.cache.get(config.adminRole)) return;

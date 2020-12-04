@@ -4,7 +4,7 @@ const config = require('../config.json');
 module.exports = {
     name: 'about',
     adminCommand: true,
-    usage: '**!about**',
+    usage: `**${config.prefix}about**`,
     description: 'Вывести информацию о сервере и его создателе.',
     async execute(message) {
         if (!message.member.roles.cache.get(config.adminRole)) return;
@@ -23,7 +23,6 @@ module.exports = {
             .addField('Мой Steam', 'https://steamcommunity.com/id/kitaminka')
             .addField('Мой GitHub', 'https://github.com/Kitaminka')
             .addField('Приглашение на сервер','https://discord.gg/G3Dudc3')
-            .addField('Мой Telegram','https://t.me/kitaminchik')
             .addField('Мой Telegram канал','https://t.me/kithacks')
             .setColor(config.embedColor);
 

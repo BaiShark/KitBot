@@ -5,7 +5,7 @@ const config = require('../config.json');
 module.exports = {
     name: 'help',
     adminCommand: false,
-    usage: '**!help** или **!help <имя_команды>**',
+    usage: `**${config.prefix}help** или **${config.prefix}help <имя_команды>**`,
     description: 'Вывести полный список доступных команд.',
     async execute(message, args, client) {
         let embed;

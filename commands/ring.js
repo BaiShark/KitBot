@@ -1,7 +1,9 @@
+const config = require('../config.json');
+
 module.exports = {
-    name: 'randompic',
+    name: 'rimg',
     adminCommand: false,
-    usage: '**!randompic**',
+    usage: `**${config.prefix}rimg**`,
     description: 'Вывести случайное изображение с сервиса https://prnt.sc/.',
     async execute(message) {
         await require('../modules/generatePicture.js')(message);

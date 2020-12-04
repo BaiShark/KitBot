@@ -6,7 +6,7 @@ const config = require('../config.json');
 module.exports = {
     name: 'ipinfo',
     adminCommand: false,
-    usage: '**!ipinfo <ip_адресс>**',
+    usage: `**${config.prefix}ipinfo <ip_адресс>**`,
     description: 'Вывести информацию об ip адресе.',
     async execute(message, args) {
         let embed;

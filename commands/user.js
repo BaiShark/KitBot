@@ -5,7 +5,7 @@ const config = require('../config.json');
 module.exports = {
     name: 'user',
     adminCommand: false,
-    usage: '**!user**, **!user <id_пользователя>** или **!user <упоминание_пользователя>**',
+    usage: `**${config.prefix}user**, **${config.prefix}user <id_пользователя>** или **${config.prefix}user <упоминание_пользователя>**`,
     description: 'Вывести информацию о пользователе.',
     async execute(message, args) {
         let selectedMember, embed;
