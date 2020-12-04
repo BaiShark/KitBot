@@ -9,4 +9,7 @@ module.exports = async (client) => {
     client.on('guildMemberAdd', async (member) => {
         await require('../events/welcome')(member);
     });
+    client.player.on('trackStart', async (message, track) => {
+        await require('../events/trackStart')(message, track);
+    });
 }
