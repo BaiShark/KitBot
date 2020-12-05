@@ -6,6 +6,6 @@ module.exports = {
     usage: `**${config.prefix}rimg**`,
     description: 'Вывести случайное изображение с сервиса https://prnt.sc/.',
     async execute(message) {
-        await require('../modules/generatePicture.js')(message);
+        await require('../modules/generateImage.js')(message);
     }
 };

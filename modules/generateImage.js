@@ -37,7 +37,7 @@ module.exports = async (message, result) => {
     result.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
         .then( () => {
             result.reactions.resolve('🔄').users.remove(message.author.id);
-            require('./generatePicture.js')(message, result);
+            require('./generateImage.js')(message, result);
         })
         .catch( () => {
             const embed = new Discord.MessageEmbed()

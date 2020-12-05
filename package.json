@@ -1,16 +1,16 @@
 {
   "name": "kitbot",
-  "version": "1.2.1",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "debug": "nodemon index.js"
   },
   "keywords": [],
   "author": "Kitam",
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
-    "avconv": "^3.1.0",
     "canvas": "^2.6.1",
     "discord-player": "^3.0.3",
     "discord.js": "^12.4.1",

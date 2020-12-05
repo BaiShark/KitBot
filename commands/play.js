@@ -7,6 +7,6 @@ module.exports = {
     usage: `**${config.prefix}play**`,
     description: 'Вывести пинг бота.',
     async execute(message, args, client) {
-        await client.player.play(message, args[0]);
+        await client.player.play(message, args.join(' '));
     }
 };
