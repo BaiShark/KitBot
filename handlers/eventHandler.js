@@ -12,4 +12,7 @@ module.exports = async (client) => {
     client.player.on('trackStart', async (message, track) => {
         await require('../events/trackStart')(message, track);
     });
+    client.setInterval(async () => {
+        await require('../events/randomMeme')(client);
+    }, 10000, client);
 }

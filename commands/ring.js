@@ -1,4 +1,5 @@
 const config = require('../config.json');
+const Images = require('../modules/images.js');
 
 module.exports = {
     name: 'rimg',
@@ -6,6 +7,6 @@ module.exports = {
     usage: `**${config.prefix}rimg**`,
     description: 'Вывести случайное изображение с сервиса https://prnt.sc/.',
     async execute(message) {
-        await require('../modules/generateImage.js')(message);
+        await Images.randomImage(message);
     }
 };

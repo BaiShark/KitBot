@@ -14,7 +14,7 @@ module.exports = {
         else {
             const req = unirest('GET', `http://ipwhois.app/json/${args[0]}`);
 
-            embed = req.end( (res) => {
+            req.end( (res) => {
                 if (res.error) throw res.error;
                 const ipInfo = res.body;
 
