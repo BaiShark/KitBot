@@ -14,5 +14,5 @@ module.exports = async (client) => {
     });
     client.setInterval(async () => {
         await require('../events/randomMeme')(client);
-    }, 10000, client);
+    }, 3600000, client);
 }

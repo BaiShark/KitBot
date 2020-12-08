@@ -21,5 +21,12 @@ module.exports = {
             .addField('Использование:', command.usage)
             .setTimestamp()
             .setColor(config.embedColor);
+    },
+    defaultEmbed(title, description) {
+        return new Discord.MessageEmbed()
+            .setTitle(title)
+            .setDescription(description)
+            .setTimestamp()
+            .setColor(config.embedColor);
     }
 }
