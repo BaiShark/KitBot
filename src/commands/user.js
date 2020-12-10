@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
-const error = require('../modules/error');
-const config = require('../config.json');
+const Embed = require('../modules/embed');
+const config = require('../../config.json');
 
 module.exports = {
     name: 'user',
@@ -20,7 +20,7 @@ module.exports = {
         }
 
         if (!selectedMember) {
-            embed = error.embed('Не удалось найти пользователя.');
+            embed = Embed.errorEmbed('Не удалось найти пользователя.');
         }
         else {
             embed = new Discord.MessageEmbed()

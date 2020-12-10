@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
-const error = require('../modules/error');
-const config = require('../config.json');
+const Embed = require('../modules/embed');
+const config = require('../../config.json');
 
 module.exports = {
     name: 'help',
@@ -32,20 +32,9 @@ module.exports = {
             }
         } else {
             if (!client.commands.has(args[0])) {
-                embed = error.embed('Введенная вами команда не существует.');
+                embed = Embed.errorEmbed('Введенная вами команда не существует.');
             } else {
-                const command = client.commands.get(args[0]);
-                let commandStatus;
-
-                if (client.commands.get(args[0]).adminCommand) commandStatus = 'Да';
-                else commandStatus = 'Нет';
-                embed = new Discord.MessageEmbed()
-                    .setTitle(`:page_facing_up:Описание команды ${config.prefix + args[0]}`)
-                    .setDescription(command.description)
-                    .addField('Требует роль администратора:', commandStatus)
-                    .addField('Использование:', command.usage)
-                    .setTimestamp()
-                    .setColor(config.embedColor);
+                embed = Embed.commandInfo(client.commands.get(args[0]));
             }
         }
         return message.channel.send(embed);

@@ -1,16 +1,17 @@
 {
   "name": "kitbot",
-  "version": "1.2.1",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "debug": "nodemon index.js"
   },
   "keywords": [],
   "author": "Kitam",
   "license": "ISC",
   "dependencies": {
     "canvas": "^2.6.1",
-    "discord.js": "^12.4.1",
+    "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "node-fetch": "^2.6.1",
     "unirest": "^0.6.0"

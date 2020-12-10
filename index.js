@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const client = new Discord.Client();
 
-require('./handlers/eventHandler')(client);
-require('./handlers/commandHandler')(client);
+require('./src/handlers/eventHandler')(client);
+require('./src/handlers/commandHandler')(client);
 
 client.login(process.env.TOKEN);
