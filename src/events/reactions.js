@@ -1,4 +1,4 @@
-const config = require('../config.json');
+const config = require('../../config.json');
 
 module.exports = async (message) => {
     const content = message.content.toLowerCase();

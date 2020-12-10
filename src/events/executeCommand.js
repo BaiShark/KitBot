@@ -1,4 +1,4 @@
-const config = require('../config.json');
+const config = require('../../config.json');
 
 module.exports = async (client, message) => {
     if (!message.content.startsWith(config.prefix) || message.author.bot || message.channel.type === 'dm') return;

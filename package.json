@@ -10,14 +10,11 @@
   "author": "Kitam",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/opus": "^0.3.3",
     "canvas": "^2.6.1",
-    "discord-player": "^3.0.3",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "node-fetch": "^2.6.1",
-    "unirest": "^0.6.0",
-    "ytdl-core": "^4.1.4"
+    "unirest": "^0.6.0"
   },
   "devDependencies": {},
   "repository": {

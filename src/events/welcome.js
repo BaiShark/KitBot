@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const Canvas = require('canvas');
-const config = require('../config.json');
+const config = require('../../config.json');
 
 module.exports = async (member) => {
     if (member.user.bot) return;
@@ -9,7 +9,7 @@ module.exports = async (member) => {
 
     const canvas = Canvas.createCanvas(700, 250);
     const ctx = canvas.getContext('2d');
-    Canvas.registerFont('./fonts/impact.ttf', { family: 'Impact' });
+    Canvas.registerFont('../../public/fonts/impact.ttf', { family: 'Impact' });
 
     const background = await Canvas.loadImage('./img/background.jpg');
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);

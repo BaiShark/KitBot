@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
-const Images = require('./images.js');
 const unirest = require('unirest');
 const fetch = require('node-fetch');
-const config = require('../config.json');
+const config = require('../../config.json');
 const characters = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
 module.exports = {
@@ -39,7 +38,7 @@ module.exports = {
         result.awaitReactions(filter, {max: 1, time: 60000, errors: ['time']})
             .then(() => {
                 result.reactions.resolve('🔄').users.remove(message.author.id);
-                Images.randomImage(message, result);
+                this.randomImage(message, result);
             })
             .catch(() => {
                 const embed = new Discord.MessageEmbed()

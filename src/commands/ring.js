@@ -1,4 +1,4 @@
-const config = require('../config.json');
+const config = require('../../config.json');
 const Images = require('../modules/images.js');
 
 module.exports = {

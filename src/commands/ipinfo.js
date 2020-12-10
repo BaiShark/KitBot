@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const unirest = require('unirest');
 const Embed = require('../modules/embed');
-const config = require('../config.json');
+const config = require('../../config.json');
 
 module.exports = {
     name: 'ipinfo',
