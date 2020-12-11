@@ -53,12 +53,13 @@ module.exports = {
     },
     async randomMeme(client) {
         let embed;
-        const req = unirest('GET', 'https://some-random-api.ml/meme');
+        const req = unirest('GET', 'https://www.reddit.com/r/dankmemes/.json?&show=all&limit=100');
         await req.end( (res) => {
-            if (res.error) throw res.error;
+            const memeNumber = Math.floor(Math.random() * 100);
+            const memeUrl = res.body.data.children[memeNumber].data.url;
             embed = new Discord.MessageEmbed()
                 .setTitle(':joy:Случайный мем')
-                .setImage(res.body.image)
+                .setImage(memeUrl)
                 .setColor(config.embedColor)
                 .setTimestamp();
             client.channels.cache.get(config.memeChannel).send(embed);
