@@ -2,46 +2,39 @@
 [![Issues](https://img.shields.io/github/issues/Kitaminka/KitBot)](https://github.com/Kitaminka/KitBot/issues)
 [![Stars](https://img.shields.io/github/stars/Kitaminka/KitBot)](https://github.com/Kitaminka/KitBot/stargazers)
 
-Discord бот для моего сервера.
+Bot for my discord server.
 ___
-### Установка и запуск
-- Установите **[node.js](https://nodejs.org/)** на ваш компьютер.
-- Скопируйте репозиторий на ваш компьютер.
-- Откройте консоль в скопированном репозитории.
-- Для завершения установки пропишите в консоли следующую команду:
+### Installation and launching
+- Install **[node.js](https://nodejs.org/)** to your computer.
+- Clone repository to your computer.
+- Open console in the copied repository.
+- To complete the installation, write the following command in the console:
 ```console
 npm install
 ```
-- После установки вам нужно будет **[настроить бота](#настройка-бота)**. 
-- Для запуска бота пропишите в консоли следующую команду:
+- After installation, you will need to **[configure the bot](#bot-config)**. 
+- To start the bot, write the following command in the console:
 ```console
 node .
 ```
 ___
-### Настройка бота
-- Создайте на приложение на сайте **[Discord Developer Portal](https://discord.com/developers/)**.
-- Перейдя во вкладку **Bot**, создайте бота и скопируйте его токен.
-- Откройте файл **index.js**, используя любой текстовый редактор.
-- Найдите следующие строчки:
-```js
-client.login(process.env.TOKEN);
-```
-- Замените текст **process.env.TOKEN** на токен вашего бота в кавычках. Должно получится примерно так:
-```js
-client.login('Njc2MTY0NDQwNTg4MDI1ODY2.XkFyMg.cMKBXh5AJ-u0SQt501OoAdgF34f');
-```
-- Откройте файл **config.json**, используя любой текстовый редактор.
--  В этом файле записаны общие настройки бота в следующем формате:
+### Bot config
+- Create an app on the **[Discord Developer Portal](https://discord.com/developers/)**.
+- Go to the **Bot** tab, create a bot and copy its token.
+- Create a file **.env** and put your bot token in this file. Example of **.env** file you can see in the file **.env.example**.
+- Open the **config.json** file using any text editor.
+- This file contains general bot settings in the next format:
 
-|   Название поля  |    Пример значения    |                                 Описание                                |
-|:----------------:|:---------------------:|:-----------------------------------------------------------------------:|
-|      prefix      |           "!"         |             Префикс, который нужно писать в начале команды.             |
-|    embedColor    |        "ff6940"       |                           Цвет сообщений бота.                          |
-|  welcomeChannel  |  "759521716241825873" |     ID канала, в котором бот будет приветствовать новых участников.     |
-|     adminRole    |  "759683325065166878" |         ID роли, которая является ролью администраторов сервера.        |
-| verificationRole |  "772709949662035969" |              ID роли, которая является ролью для верификации.            |
-| reactionMessages | ["xd", "lmao", "ban"] | Массив, который содержит слова, под которыми бот будет ставить реакции. |
+|Field name|Example value|Description|
+|:---:|:---:|:---:|
+|prefix|"!"|Prefix, which you need to write at command begin.|
+|embedColor|"ff6940"|Bot embed message color.|
+|welcomeChannel|"759521716241825873"|Channel ID, where the bot welcomes new members.|
+|memeChannel|"784804599647305748"|Channel ID, where the bot sends random meme every hour.|
+|adminRole|"759683325065166878"|Role ID, that is the server administrator role.|
+|verificationRole|"772709949662035969"|Role ID, that is the verification role.|
+|reactionMessages|["xd", "lmao", "ban"]|An array containing words that the bot will place reactions under.|
 ___
-### Discord сервер
-Если у вас есть желание посмотреть функционал бота, не устанавливая и не запуская его, вы можете зайти на мой **[сервер](https://discord.gg/G3Dudc3)**.
+### Discord server
+If you want to check bot functionality without installing and running it, you can join my **[Discord server](https://discord.gg/G3Dudc3)**.
 ___
