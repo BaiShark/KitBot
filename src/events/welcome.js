@@ -27,7 +27,7 @@ module.exports = async (member) => {
 
     const embed = new Discord.MessageEmbed()
         .setTitle(':wave:Добро пожаловать!')
-        .setDescription(`${member} Добро пожаловать на сервер, **MagmaPixel**. Надеюсь, тебе тут понравится.`)
+        .setDescription(`${member} Добро пожаловать на сервер, **MagmaPixel**. Подай заявку в канале #вайтлист. Надеюсь, тебе тут понравится.`)
         .attachFiles([new Discord.MessageAttachment(canvas.toBuffer(), 'welcome_image.png')])
         .setImage('attachment://welcome_image.png')
         .setTimestamp()
